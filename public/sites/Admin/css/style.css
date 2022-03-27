@@ -1,0 +1,311 @@
+/*************************************************
+Copyright © 2022 Ennio Marke
+ ____    ____  ____  ____   ______   _________  
+|_   \  /   _||_  _||_  _|.' ____ \ |  _   _  | 
+  |   \/   |    \ \  / /  | (___ \_||_/ | | \_| 
+  | |\  /| |     \ \/ /    _.____`.     | |     
+ _| |_\/_| |_    _|  |_   | \____) |   _| |_    
+|_____||_____|  |______|   \______.'  |_____| 
+*************************************************/
+
+:root {
+  --primary-color: #eeeae7;
+  --secondary-color: #565656;
+  --font-color: #eeeae7;
+  --font-color-2: #c0bdbb;
+  --bg-color: #464646;
+  /*#081917;*/
+  --heading-color: #eeeae7;
+}
+
+* {
+  color: #eeeae7;
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+  display: none;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  color: var(--heading-color);
+  font-size: 2rem;
+  margin-bottom: 1vh;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../../../assets/pictures/pizza-background-min.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--bg-color);
+  margin: 0;
+  font-size: 3vmin;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+  font-family: italianno;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  transform: scale(1.5);
+}
+
+em {
+  color: var(--font-color);
+}
+
+p {
+  color: var(--primary-color);
+  font-family: italianno;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 5px;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  bottom: 0;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.flex-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin-top: 0;
+}
+
+.flex-container * {
+  min-height: min-content;
+}
+
+.flex-container a {
+  font-size: 10vmin;
+  display: none;
+}
+
+#content * {
+  min-height: min-content;
+}
+
+#content a {
+  font-size: 10vmin;
+  display: none;
+}
+
+#content p.ingredient,
+#content p.option {
+  cursor: pointer;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--primary-color);
+  background-color: transparent;
+  text-align: center;
+  font-family: italianno;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.float-child {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-container:nth-child(1) {
+  margin-top: 10%;
+}
+
+.used {
+  color: #eeeae781;
+}
+
+h1#pswHeading {
+  position: fixed;
+  top: 5%;
+  font-size: 3vmin;
+  right: auto;
+  color: #eeeae7;
+  font-size: 4vmin;
+  font-family: italianno;
+}
+
+button#next {
+  position: fixed;
+  right: auto;
+  top: 5%;
+  height: 5vmin;
+  width: 15vmin;
+  background: transparent;
+  border: 2px solid #eeeae7;
+  border-radius: 5vmin;
+  color: #eeeae7;
+  font-size: 4vmin;
+  font-family: italianno;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#content #orderHeading {
+  position: fixed;
+  width: 20vw;
+  height: 5vmin;
+  border-bottom: 2px solid #eeeae7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eeeae7;
+  top: 5%;
+}
+
+#content #orderHeading:hover {
+  cursor: default;
+}
+
+#orderTable {
+  margin-bottom: 5vh;
+}
+
+table {
+  border-collapse: separate;
+  border: solid 1px;
+  border-radius: 6px;
+}
+
+td,
+th {
+  border-left: solid 1px;
+  border-top: solid 1px;
+  text-align: center;
+}
+
+th {
+  border-top: none;
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
+}
+
+.oTR,
+.iTR {
+  cursor: pointer;
+}
+
+#footerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  height: 10vmin;
+  width: 100vw;
+}
+
+button#nextPizza,
+button#beforePizza {
+  top: 0;
+  height: 5vmin;
+  width: 15vmin;
+  background: transparent;
+  border: 2px solid #eeeae7;
+  border-radius: 5vmin;
+  color: #eeeae7;
+  font-size: 4vmin;
+  font-family: italianno;
+  font-weight: bold;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--font-color);
+  border-radius: 10px;
+  /*border: 3px solid var(--bg-color);*/
+}
+
+/*Page back arrow*/
+.icon-back {
+  stroke-width: 3;
+  width: 50px;
+  height: 30px;
+}
+
+.icon-back-div {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  top: 4.5%;
+  left: 3%;
+  position: fixed;
+}
+
+/*********************************
+       :\     /;               _
+      ;  \___/  ;             ; ;
+     ,:-"'   `"-:.            / ;
+    /,---.   ,---.\         _; /
+   ((  |  ) (  |  ))    ,-""_,"
+    \`````   `````/""""",-""
+     '-.._ v _..-'      )
+       / ___   ____,..  \
+      / /   | |   | ( \. \
+     / /    | |    | |  \ \
+     `"     `"     `"    `"
+*********************************/
