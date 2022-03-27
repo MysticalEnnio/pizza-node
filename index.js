@@ -7,7 +7,7 @@ const port = 3000 || 3000;
 const fs = require("fs");
 
 app.use(cors());
-app.use(express.static("public"));
+app.use(express.static("public", { redirect: true }));
 
 //configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
